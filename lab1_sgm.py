@@ -2,14 +2,14 @@ import nltk
 from lxml import html
 from lxml import etree
 
-root = html.parse('../reuters/reut2-000.sgmCopy').getroot() # root = [html]
-print "topics 1: ", root.find('body').find('reuters').find('topics').find('d').text
-print "title 1: ", root.find('body').find('reuters').find('text').find('title').text
+# root = html.parse('../reuters/reut2-000.sgmCopy').getroot() # root = [html]
+# print "topics 1: ", root.find('body').find('reuters').find('topics').find('d').text
+# print "title 1: ", root.find('body').find('reuters').find('text').find('title').text
 # print "content 1: ", root.find('body').find('reuters').find('text').find('content').text
 
 # each a is node 'reuters'
-c = root.find('body').getchildren()[0]
-print type(c), len(c), c[0].keys()
+# c = root.find('body').getchildren()[0]
+# print type(c), len(c), c[0].keys()
 # print etree.tostring(root, pretty_print=True)
 
 class RawArticle:
@@ -39,12 +39,12 @@ class SgmFile:
 		content = ""
 		if hasTitle(reuters):
 			title = reuters.find('text').find('title').text
-		else:
-			print "no title, line#:", reuters.sourceline
+		# else:
+		# 	print "no title, line#:", reuters.sourceline
 		if hasContent(reuters):
 			content = reuters.find('text').find('content').text
-		else:
-			print title
+		# else:
+		# 	print title
 		ra0 = RawArticle(title, content) # raw article 0
 		# print "topic :", reuters.get('topics')
 		if reuters.get('topics').lower() == "yes":
@@ -53,7 +53,7 @@ class SgmFile:
 		self.articles.append(ra0)
 
 		ras = root.getchildren() # raw articles
-		print "ras type: ", type(ras), "; len=", len(ras)
+		# print "ras type: ", type(ras), "; len=", len(ras)
 		for reuter in ras:
 			# print "type reuter: ", type(reuter), "; tag=", reuter.tag
 			if reuter.tag == 'body':
@@ -62,12 +62,12 @@ class SgmFile:
 			content = ""
 			if hasTitle(reuter):
 				title = reuter.find('text').find('title').text
-			else:
-				print "no title, line#:", reuter.sourceline
+			# else:
+			# 	print "no title, line#:", reuter.sourceline
 			if hasContent(reuter):
 				content = reuter.find('text').find('content').text
-			else:
-				print title
+			# else:
+			# 	print title
 			ra = RawArticle(title, content)
 			if hasTopic(reuter):
 				topic = reuter.find('topics').find('d').text
@@ -75,11 +75,11 @@ class SgmFile:
 			self.articles.append(ra)
 
 
-
-sf = SgmFile('../reuters/reut2-000.sgmCopy')
-print "len(sf)=", len(sf.articles)
-print "sf title: ", sf.articles[0].title
-print "sf topic: ", sf.articles[0].topic
+# this piece of code shows how to use the above SgmFile class
+# sf = SgmFile('../reuters/reut2-000.sgmCopy')
+# print "len(sf)=", len(sf.articles)
+# print "sf title: ", sf.articles[0].title
+# print "sf topic: ", sf.articles[0].topic
 # print "sf content: ", sf.articles[0].content
 
 # TODO: topics includes mutiple <D></D> pairs

@@ -4,70 +4,10 @@ import nltk
 from lxml import html
 from lxml import etree
 from nltk.corpus import stopwords
+from lab1_sgm import *
 
 PUNCTUATION =[';', ':', ',', '.', '!', '?', '>', '<']
 GENERAL_STOPWORDS_LIST = stopwords.words("english") + PUNCTUATION
-
-class RawArticle:
-    def __init__(self, title, content, topic=""):
-        self.title = title
-        self.content = content
-        self.topic = topic
-
-class SgmFile:
-    articles = []
-
-    def __init__(self, filename):
-        def hasTopic(node):
-            return node.get('topics').lower() == "yes" and node.find('topics').find('d') != None
-        def hasContent(node):
-            return node.find('text').find('content') != None
-        def hasTitle(node):
-            return node.find('text').find('title') != None
-
-        root = html.parse(filename).getroot()
-
-        # the first article is warpped into a 'body' tag
-        # so that we need to process it first
-        reuters = root.find('body').getchildren()[0]
-        title = ""
-        content = ""
-        if hasTitle(reuters):
-            title = reuters.find('text').find('title').text
-        # else:
-            # print "no title, line#:", reuters.sourceline
-        if hasContent(reuters):
-            content = reuters.find('text').find('content').text
-        # else:
-            # print title
-        ra0 = RawArticle(title, content) # raw article 0
-        # print "topic :", reuters.get('topics')
-        if reuters.get('topics').lower() == "yes":
-            topic = reuters.find('topics').find('d').text
-            ra0.topic = topic
-        self.articles.append(ra0)
-
-        ras = root.getchildren() # raw articles
-        # print "ras type: ", type(ras), "; len=", len(ras)
-        for reuter in ras:
-            # print "type reuter: ", type(reuter), "; tag=", reuter.tag
-            if reuter.tag == 'body':
-                continue
-            title = ""
-            content = ""
-            if hasTitle(reuter):
-                title = reuter.find('text').find('title').text
-            # else:
-            #     print "no title, line#:", reuter.sourceline
-            if hasContent(reuter):
-                content = reuter.find('text').find('content').text
-            # else:
-            #     print title
-            ra = RawArticle(title, content)
-            if hasTopic(reuter):
-                topic = reuter.find('topics').find('d').text
-                ra.topic = topic
-            self.articles.append(ra)
 
 def preprocess(paragraph): # Tokenize, stem, remover general stop words
     from nltk import stem
