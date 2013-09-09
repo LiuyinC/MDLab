@@ -94,6 +94,8 @@ def article_reader():
     # for i in xrange(len(sgm_extractor.articles)):
     #     print simplelist[i].title
 
+def key_word_vector():
+    pass
 
 article_reader()
 print simplelist[1].title
