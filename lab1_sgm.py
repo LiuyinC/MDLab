@@ -13,7 +13,7 @@ from lxml import etree
 # print etree.tostring(root, pretty_print=True)
 
 class RawArticle:
-	def __init__(self, title, content, topic=""):
+	def __init__(self, title, content, topic):
 		self.title = title
 		self.content = content
 		self.topic = topic
@@ -62,6 +62,7 @@ class SgmFile:
 				reuter = reuter.getchildren()[0]
 			title = ""
 			content = ""
+			topic = ""
 			if hasTitle(reuter):
 				title = reuter.find('text').find('title').text
 			# else:
@@ -70,10 +71,16 @@ class SgmFile:
 				content = reuter.find('text').find('content').text
 			# else:
 			# 	print title
-			ra = RawArticle(title, content)
 			if hasTopic(reuter):
-				topic = reuter.find('topics').find('d').text
-				ra.topic = topic
+				# this is for the case that only has one topic word
+				# topic = reuter.find('topics').find('d').text
+				# ra.topic = topic
+				# in many cases, there are many words
+				for t in reuter.find('topics').itertext():
+					topic = topic + " " + t
+				# allTopic = reuter.find('topics').findall('d')
+				# print "type allTopic: ", type(allTopic)
+			ra = RawArticle(title, content, topic)
 			self.articles.append(ra)
 
 
@@ -84,9 +91,7 @@ class SgmFile:
 # print "sf topic: ", sf.articles[0].topic
 # print "sf content: ", sf.articles[0].content
 
-# TODO: topics includes mutiple <D></D> pairs
 # TODO: article with no title, that has <TEXT TYPE="UNPROC">,
 #       which we could do: find('text').text
 # TODO: article with no topic, that has <TEXT TYPE="BRIEF">,
 #       which we may consider whether use title as content or not
-# TODO: merge the 'body' case into 'reuters' case
