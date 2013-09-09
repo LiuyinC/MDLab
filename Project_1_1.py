@@ -28,22 +28,23 @@ class Article:
         return preprocess(self.title)
 
 def article_reader():
-    global articles_list, articles_amount
+    articles_list = []
     sgm_extractor = SgmFile("./rawdata/reut2-000.sgmCopy")
     articles_amount = xrange(len(sgm_extractor.articles))
     articles_list=[Article(tid, sgm_extractor.articles[tid].title, sgm_extractor.articles[tid].content) for tid in articles_amount]
     # for i in xrange(len(sgm_extractor.articles)):
     #     print simplelist[i].title
+    return articles_list
 
-def title_keyword_vector_generator():
-    global title_keywords_vector
+def title_keyword_vector_generator(articles_list):
     title_keywords_vector={}
+    articles_amount = xrange(len(articles_list))
     for aid in articles_amount:
         title_keywords_vector.update({articles_list[aid].text_id : articles_list[aid].title_keywords()})
+    return title_keywords_vector
 
+articles_list = article_reader()
+title_keywords_vector = title_keyword_vector_generator(articles_list)
 
-
-article_reader()
-title_keyword_vector_generator()
 print articles_list[1].title
 print title_keywords_vector
