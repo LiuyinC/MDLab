@@ -32,6 +32,8 @@ class SgmFile:
 
 		root = html.parse(filename).getroot()
 
+		# print etree.tostring(root, pretty_print=True)
+
 		# the first article is warpped into a 'body' tag
 		# so that we need to process it first
 		# reuters = root.find('body').getchildren()[0]
@@ -52,14 +54,14 @@ class SgmFile:
 		# 	ra0.topic = topic
 		# self.articles.append(ra0)
 
-		ras = root.getchildren() # raw articles
+		ras = root.find('body').getchildren() # raw articles
 		# print "ras type: ", type(ras), "; len=", len(ras)
 		for reuter in ras:
 			# print "type reuter: ", type(reuter), "; tag=", reuter.tag
-			if reuter.tag == 'body':
-				# the first article is warpped into a 'body' tag
-				# so that we need to get its child
-				reuter = reuter.getchildren()[0]
+			# if reuter.tag == 'body':
+			# 	# the first article is warpped into a 'body' tag
+			# 	# so that we need to get its child
+			# 	reuter = reuter.getchildren()[0]
 			title = ""
 			content = ""
 			topic = ""

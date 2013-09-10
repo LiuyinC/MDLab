@@ -29,7 +29,8 @@ class Article:
 
 def article_reader():
     articles_list = []
-    sgm_extractor = SgmFile("./rawdata/reut2-000.sgmCopy")
+    sgm_extractor = SgmFile("./rawdata/reut2-000.sgm")
+    # print len(sgm_extractor.articles)
     articles_amount = xrange(len(sgm_extractor.articles))
     articles_list=[Article(tid, sgm_extractor.articles[tid].title, sgm_extractor.articles[tid].content) for tid in articles_amount]
     # for i in xrange(len(sgm_extractor.articles)):
@@ -46,5 +47,6 @@ def title_keyword_vector_generator(articles_list):
 articles_list = article_reader()
 title_keywords_vector = title_keyword_vector_generator(articles_list)
 
+# print len(articles_list)
 print articles_list[1].title
 print title_keywords_vector
