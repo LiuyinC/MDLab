@@ -29,6 +29,8 @@ class Article:
         self.content = content
     def title_keywords(self):
         return set(preprocess(self.title))
+    def content_freqDist(self):
+        return count_words(self.content)
 
 def article_reader(filename):
     articles_list = []
@@ -45,7 +47,7 @@ def title_keyword_vector_generator(articles_list):
     return title_keywords_vector
 
 # get the frequency distribution of given string
-def countWords(data):
+def count_words(data):
     # tokens = nltk.tokenize.word_tokenize(data)
     tokens = preprocess(data)
     fdist = FreqDist(tokens) #input is a list of string
@@ -58,10 +60,19 @@ def countWords(data):
     # FreqDist: http://nltk.googlecode.com/svn/trunk/doc/api/nltk.probability.FreqDist-class.html
     return fdist
 
+def read_all_files():
+    articles_list = []
+    for i in xrange(22):
+        filename = "./rawdata/reut2-" + str(i).zfill(3) + ".sgm"
+        articles_list += article_reader(filename)
+    return articles_list
+
 # NOTE: we need to replace <body> and </body> tags in all *.sgm files
-articles_list = article_reader("./rawdata/reut2-000.sgm")
+# articles_list = article_reader("./rawdata/reut2-000.sgm")
+articles_list = read_all_files()
+print "len articles_list:", len(articles_list)
 title_keywords_vector = title_keyword_vector_generator(articles_list)
-fdist_content = countWords(articles_list[0].content)
+fdist_content = articles_list[0].content_freqDist()
 
 # print len(articles_list)
 print articles_list[0].title
@@ -69,5 +80,7 @@ print articles_list[0].title
 # print title_keywords_vector
 print "# York: ", fdist_content['york']
 print "top 10 Frequency:\n", fdist_content.tabulate(10)
+
+
 
 
