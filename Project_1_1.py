@@ -27,6 +27,7 @@ class Article:
         self.text_id = text_id
         self.title = title
         self.content = content
+        self.fdist = count_words(content)
     def title_keywords(self):
         return set(preprocess(self.title))
     def content_freqDist(self):
@@ -46,10 +47,22 @@ def title_keyword_vector_generator(articles_list):
         title_keywords_vector.update({articles_list[aid].text_id : articles_list[aid].title_keywords()})
     return title_keywords_vector
 
+def content_keyword_vector_generator(articles_list):
+    all_fdist = FreqDist()
+    for article in articles_list:
+        for item in article.content_freqDist().iteritems():
+            all_fdist.__setitem__(item[0], item[1])
+    return all_fdist
+
+
 # get the frequency distribution of given string
 def count_words(data):
     # tokens = nltk.tokenize.word_tokenize(data)
+    
     tokens = preprocess(data)
+    # here we want to try to set the tokens
+    # tokens = list(set(preprocess(data)))
+
     fdist = FreqDist(tokens) #input is a list of string
     # print "type fdist:", fdist
     # vocabulary = fdist.keys() 
@@ -62,7 +75,7 @@ def count_words(data):
 
 def read_all_files():
     articles_list = []
-    for i in xrange(22):
+    for i in xrange(1):    # total: 22 files
         filename = "./rawdata/reut2-" + str(i).zfill(3) + ".sgm"
         articles_list += article_reader(filename)
     return articles_list
@@ -73,13 +86,20 @@ articles_list = read_all_files()
 print "len articles_list:", len(articles_list)
 title_keywords_vector = title_keyword_vector_generator(articles_list)
 fdist_content = articles_list[0].content_freqDist()
+# print "len articles_list[0].freqDist: ", len(fdist_content.items())
+# all_fdist = content_keyword_vector_generator(articles_list)
+# print "len all_fdist: ", len(all_fdist)
+# all_fdist.plot(100, title="hello", cumulative=False)
+# print "top 20 Frequency:\n", all_fdist.tabulate(20)
+
 
 # print len(articles_list)
-print articles_list[0].title
+# print articles_list[0].title
 # print articles_list[0].content
 # print title_keywords_vector
-print "# York: ", fdist_content['york']
-print "top 10 Frequency:\n", fdist_content.tabulate(10)
+# print "# York: ", fdist_content['york']
+# print "fdist item: ", fdist_content.items()[0]
+# print "top 10 Frequency:\n", fdist_content.tabulate(10)
 
 
 
