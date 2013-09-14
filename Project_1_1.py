@@ -87,7 +87,7 @@ def count_words(data):
 
 def read_all_files():
     articles_list = []
-    for i in xrange(1):
+    for i in xrange(22):
         filename = "./rawdata/reut2-" + str(i).zfill(3) + ".sgm"
         articles_list += article_reader(filename, i)
     return articles_list
