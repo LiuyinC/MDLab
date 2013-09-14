@@ -7,7 +7,7 @@ from nltk.corpus import stopwords
 from lab1_sgm import *
 from nltk import FreqDist
 
-PUNCTUATION =[';', ':', ',', '.', '!', '?', '>', '<', '"', ']', '[', '-']
+PUNCTUATION =[';', ':', ',', '.', '!', '?', '>', '<', '"', ']', '[', '-', '(', ')', "''", '``']
 GENERAL_STOPWORDS_LIST = stopwords.words("english") + PUNCTUATION
 
 def preprocess(paragraph): # Tokenize, stem, remover general stop words
@@ -87,7 +87,7 @@ def count_words(data):
 
 def read_all_files():
     articles_list = []
-    for i in xrange(22):
+    for i in xrange(1):
         filename = "./rawdata/reut2-" + str(i).zfill(3) + ".sgm"
         articles_list += article_reader(filename, i)
     return articles_list
@@ -122,11 +122,8 @@ articles_list = read_all_files()
 print "len articles_list:", len(articles_list)
 content_keywords_vector = content_keywords_generator(sample_content_keywords_generator(), articles_list)
 title_keywords_vector = title_keyword_vector_generator(articles_list)
-# print "len articles_list[0].freqDist: ", len(fdist_content.items())
-# all_fdist = content_FreqDist_generator(articles_list)
-# all_fdist.plot(100, title="hello", cumulative=False)
-# print "top 20 Frequency:\n", all_fdist.tabulate(20)
+# print title_keyword_vector_generator(articles_list[0:10])
+# print sample_content_keywords_generator()
+# print content_keywords_generator(sample_content_keywords_generator(), articles_list[0:1])
 
-# print "# York: ", fdist_content['york']
-# print "fdist item: ", fdist_content.items()[0]
 
