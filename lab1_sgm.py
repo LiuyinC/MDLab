@@ -20,9 +20,9 @@ class RawArticle:
 
 
 class SgmFile:
-	articles = []
-
 	def __init__(self, filename):
+		self.articles = []
+
 		def hasTopic(node):
 			return node.get('topics').lower() == "yes" and node.find('topics').find('d') != None
 		def hasContent(node):
