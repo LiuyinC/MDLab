@@ -1,0 +1,9 @@
+1. description of each file
+	./rawdata/ : all the .sgm files that has replaced <body> and </body> tags with <content> and </content> tags
+	Project_1_1.py : the main program
+	lab1_sgm.py : a support class
+2. how to run the program
+	$ python Project_1_1.py
+3. Need nltk library and lxml library
+	nltk: http://nltk.org/install.html
+	lxml: http://lxml.de/installation.html
