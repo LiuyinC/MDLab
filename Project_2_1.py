@@ -1,39 +1,9 @@
 __author__ = 'Liuyin'
 
-import nltk
-from lxml import html
-from lxml import etree
-from nltk.corpus import stopwords
+
+from proprocesser_token_stem import *
 from lab1_sgm import *
 from nltk import FreqDist
-
-PUNCTUATION =[';', ':', ',', '.', '!', '?', '>', '<', '"', ']', '[', '-', '(', ')', "''", '``']
-GENERAL_STOPWORDS_LIST = stopwords.words("english") + PUNCTUATION
-
-def preprocess(paragraph): # Tokenize, stem, remover general stop words
-    from nltk import stem
-
-    tokenized_paragraph = nltk.tokenize.word_tokenize(paragraph)
-    # tokenized_paragraph = nltk.word_tokenize(paragraph)
-
-    ##############
-    # another way of tokenize
-    ##############
-    # stop_symbols = "!@#$%^&*()_+=-?></.,';\":][}{\r\n\t~`"
-    # tokenized_paragraph = paragraph
-    # for s in stop_symbols:
-    #     tokenized_paragraph = tokenized_paragraph.replace(s, '')
-    # tokenized_paragraph = tokenized_paragraph.lower()
-    # tokenized_paragraph = tokenized_paragraph.split()
-
-    stemmed_paragraph =[]
-    stemmer = stem.snowball.EnglishStemmer()
-    for word in tokenized_paragraph:
-        stemmed_paragraph.append(stemmer.stem(word))
-    # we don't want to merge repeated words, so that we could not use set
-    # preprocessed_paragragh = list(set(stemmed_paragraph) - set(GENERAL_STOPWORDS_LIST))
-    preprocessed_paragragh = [x for x in stemmed_paragraph if x not in GENERAL_STOPWORDS_LIST]
-    return preprocessed_paragragh
 
 class Article:
     def __init__(self,text_id,title,content, topic):
@@ -124,8 +94,10 @@ def content_keywords_generator(relative_word_list, articles_list):
 # NOTE: we need to replace <body> and </body> tags in all *.sgm files
 articles_list = read_all_files()
 print "len articles_list:", len(articles_list)
-content_keywords_vector = content_keywords_generator(sample_content_keywords_generator(), articles_list)
-title_keywords_vector = title_keyword_vector_generator(articles_list)
+for article in articles_list:
+    print article.topic
+#content_keywords_vector = content_keywords_generator(sample_content_keywords_generator(), articles_list)
+#title_keywords_vector = title_keyword_vector_generator(articles_list)
 # print title_keyword_vector_generator(articles_list[0:10])
 # print sample_content_keywords_generator()
 # print content_keywords_generator(sample_content_keywords_generator(), articles_list[0:1])
