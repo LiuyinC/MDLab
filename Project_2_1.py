@@ -43,31 +43,6 @@ def content_FreqDist_generator(articles_list):
             all_fdist.inc(key, value)
     return all_fdist
 
-def generate_topics_list(articles_list):
-    ### Generate topics list ###
-    topic_list = set()
-    for article in articles_list:
-        topic_list.add(article.topic)
-    topic_list = tuple(topic_list)
-    return topic_list
-
-def topic_category(articles_list):
-    ### Classify articles based on their topics ###
-    topic_articles_matrix = dict()
-    for article in articles_list:
-        if article.topic not in topic_articles_matrix.keys():
-            value = []
-            value.append(str(article.text_id))
-            topic_articles_matrix.update({article.topic: value})
-        else:
-            contained_list = topic_articles_matrix[article.topic]
-            contained_list.append(str(article.text_id))
-            topic_articles_matrix[article.topic] = contained_list
-    return topic_articles_matrix
-
-
-
-
 def count_words(data):
     ### get the frequency distribution of given string ###
 
@@ -113,13 +88,49 @@ def content_keywords_generator(relative_word_list, articles_list):
         content_relative_word_vector.update({article_id : article_relative_word_counter})
     return content_relative_word_vector
 
+def generate_topics_list(articles_list):
+    ### Generate topics list ###
+    topic_list = set()
+    for article in articles_list:
+        topic_list.add(article.topic)
+    topic_list = tuple(topic_list)
+    return topic_list
+
+def topic_category(articles_list):
+    ### Classify articles based on their topics ###
+    topic_articles_matrix = dict()
+    for article in articles_list:
+        if article.topic not in topic_articles_matrix.keys():
+            value = []
+            value.append(article)
+            topic_articles_matrix.update({article.topic: value})
+        else:
+            contained_list = topic_articles_matrix[article.topic]
+            contained_list.append(article)
+            topic_articles_matrix[article.topic] = contained_list
+    return topic_articles_matrix
+
+def training_testing_list(topic_articles_dict):
+    training_data_list = []
+    testing_data_list = []
+    split_para = 0.8
+    for key in topic_articles_dict.keys():
+        if key != 'N/A':
+            topic_all_data_list = topic_articles_dict[key]
+            topic_training_data_list = topic_all_data_list[0: int(len(topic_all_data_list) * split_para + 1)]
+            topic_testing_data_list = topic_all_data_list[int(len(topic_all_data_list) * split_para + 1):]
+            training_data_list.extend(topic_training_data_list)
+            testing_data_list.extend(topic_testing_data_list)
+    return (training_data_list, testing_data_list)
 
 
 # NOTE: we need to replace <body> and </body> tags in all *.sgm files
 articles_list = read_all_files()
 print "len articles_list:", len(articles_list)
-print topic_category(articles_list)
-
+topic_articles_dict = topic_category(articles_list)
+sample_list = training_testing_list(topic_articles_dict)[0]
+print len(sample_list)
+print sample_list
 #content_keywords_vector = content_keywords_generator(sample_content_keywords_generator(), articles_list)
 #title_keywords_vector = title_keyword_vector_generator(articles_list)
 # print title_keyword_vector_generator(articles_list[0:10])
