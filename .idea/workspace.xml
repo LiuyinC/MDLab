@@ -1,23 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9fc6e328-c969-4cd9-babb-54f00f47dd05" name="Default" comment="add print">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Project_2_1.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/proprocesser_token_stem.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Project_1_1.py" afterPath="$PROJECT_DIR$/Project_1_1.py" />
+    <list default="true" id="9fc6e328-c969-4cd9-babb-54f00f47dd05" name="Default" comment="Split preprocessor function into an isolated py document">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Project_2_1.py" afterPath="$PROJECT_DIR$/Project_2_1.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MDLab.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="9fc6e328-c969-4cd9-babb-54f00f47dd05" time="1380400260808" ignored="false" />
+    <file path="/Dummy.txt" changelist="9fc6e328-c969-4cd9-babb-54f00f47dd05" time="1380430363832" ignored="false" />
     <file path="/Project_1_1.py" changelist="9fc6e328-c969-4cd9-babb-54f00f47dd05" time="1380400886657" ignored="false" />
     <file path="E:/OSU-ISE/CSE 5243/Lab Assignments/test.py" changelist="9fc6e328-c969-4cd9-babb-54f00f47dd05" time="1378759776710" ignored="false" />
-    <file path="/test.py" changelist="9fc6e328-c969-4cd9-babb-54f00f47dd05" time="1378759775028" ignored="false" />
+    <file path="/test.py" changelist="9fc6e328-c969-4cd9-babb-54f00f47dd05" time="1380430005837" ignored="false" />
     <file path="E:/OSU-ISE/CSE 5243/test/test.py" changelist="9fc6e328-c969-4cd9-babb-54f00f47dd05" time="1379101799207" ignored="false" />
     <file path="/lab1_sgm.py" changelist="9fc6e328-c969-4cd9-babb-54f00f47dd05" time="1379105140271" ignored="false" />
     <file path="E:/OSU-ISE/CSE 5243/test/test_dict.py" changelist="9fc6e328-c969-4cd9-babb-54f00f47dd05" time="1379122367890" ignored="false" />
     <file path="/test_dict.py" changelist="9fc6e328-c969-4cd9-babb-54f00f47dd05" time="1379122367890" ignored="false" />
-    <file path="/Project_2_1.py" changelist="9fc6e328-c969-4cd9-babb-54f00f47dd05" time="1380402048929" ignored="false" />
+    <file path="/Project_2_1.py" changelist="9fc6e328-c969-4cd9-babb-54f00f47dd05" time="1380430252775" ignored="false" />
     <file path="/proprocesser_token_stem.py" changelist="9fc6e328-c969-4cd9-babb-54f00f47dd05" time="1380402113703" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,29 +50,28 @@
       <file leaf-file-name="Project_2_1.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Project_2_1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="0" selection-start="112" selection-end="112" vertical-scroll-proportion="0.4219178">
+            <state line="66" column="0" selection-start="2363" selection-end="2363" vertical-scroll-proportion="-0.48767123">
               <folding>
                 <element signature="e#24#61#0" expanded="true" />
-                <element signature="e#131#514#0" expanded="false" />
-                <element signature="e#559#926#0" expanded="false" />
-                <element signature="e#983#1226#0" expanded="false" />
-                <element signature="e#1279#1547#0" expanded="false" />
-                <element signature="e#1625#2053#0" expanded="false" />
-                <element signature="e#2081#2266#0" expanded="false" />
-                <element signature="e#2313#2719#0" expanded="false" />
-                <element signature="e#2792#3350#0" expanded="false" />
+                <element signature="e#558#925#0" expanded="false" />
+                <element signature="e#982#1225#0" expanded="false" />
+                <element signature="e#1278#1546#0" expanded="false" />
+                <element signature="e#1593#1773#0" expanded="false" />
+                <element signature="e#1814#2362#0" expanded="false" />
+                <element signature="e#2394#2877#0" expanded="false" />
+                <element signature="e#2905#3091#0" expanded="false" />
+                <element signature="e#3138#3544#0" expanded="false" />
+                <element signature="e#3617#4175#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="proprocesser_token_stem.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/proprocesser_token_stem.py">
+      <file leaf-file-name="test.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="29" selection-start="116" selection-end="116" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#361#1341#0" expanded="false" />
-              </folding>
+            <state line="3" column="6" selection-start="46" selection-end="46" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -89,6 +87,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitLogSettings">
+    <option name="myStructureFilterPaths" />
     <option name="myDateState">
       <MyDateState />
     </option>
@@ -100,6 +99,7 @@
         <option value="$PROJECT_DIR$/Project_1_1.py" />
         <option value="$PROJECT_DIR$/rawdata/proprocessor_token_stem.py" />
         <option value="$PROJECT_DIR$/proprocesser_token_stem.py" />
+        <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/Project_2_1.py" />
       </list>
     </option>
@@ -228,6 +228,25 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Project_2_1.py" />
       <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PyDebugRunner" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PyDebugRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <module name="MDLab" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
+      <option name="PARAMETERS" value="" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
@@ -304,13 +323,15 @@
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
-    <list size="2">
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Python.Project_1_1" />
       <item index="1" class="java.lang.String" itemvalue="Python.Project_2_1" />
+      <item index="2" class="java.lang.String" itemvalue="Python.test" />
     </list>
     <recent_temporary>
-      <list size="1">
+      <list size="2">
         <item index="0" class="java.lang.String" itemvalue="Python.Project_2_1" />
+        <item index="1" class="java.lang.String" itemvalue="Python.test" />
       </list>
     </recent_temporary>
   </component>
@@ -359,28 +380,32 @@
       <created>1379131525322</created>
       <updated>1379131525322</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Split preprocessor function into an isolated py document">
+      <created>1380402190042</created>
+      <updated>1380402190042</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991454" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32991454" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27954546" sideWeight="0.6700855" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16239317" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45470086" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.6700855" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991454" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32991454" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991454" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32307693" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -424,7 +449,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="add print" />
+    <option name="LAST_COMMIT_MESSAGE" value="Split preprocessor function into an isolated py document" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -441,6 +466,7 @@
     <MESSAGE value="try again" />
     <MESSAGE value="Merge branch 'master' of https://github.com/LiuyinC/MDLab&#10;&#10;Conflicts:&#10;&#9;Project_1_1.py&#10;" />
     <MESSAGE value="add print" />
+    <MESSAGE value="Split preprocessor function into an isolated py document" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -449,27 +475,16 @@
           <url>file://$PROJECT_DIR$/Project_1_1.py</url>
           <line>2</line>
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/Project_2_1.py</url>
+          <line>85</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Project_1_1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="23" selection-end="23" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#23#34#0" expanded="true" />
-            <element signature="e#403#1379#0" expanded="false" />
-            <element signature="e#2252#2495#0" expanded="false" />
-            <element signature="e#2548#2816#0" expanded="false" />
-            <element signature="e#2894#3322#0" expanded="false" />
-            <element signature="e#3350#3535#0" expanded="false" />
-            <element signature="e#3582#3988#0" expanded="false" />
-            <element signature="e#4061#4619#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lab1_sgm.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="0" selection-start="685" selection-end="685" vertical-scroll-proportion="0.0">
@@ -644,26 +659,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/proprocesser_token_stem.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="29" selection-start="116" selection-end="116" vertical-scroll-proportion="0.0">
+        <state line="9" column="0" selection-start="285" selection-end="285" vertical-scroll-proportion="0.3548387">
           <folding>
+            <element signature="e#75#86#0" expanded="true" />
             <element signature="e#361#1341#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="6" selection-start="46" selection-end="46" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Project_2_1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="112" selection-end="112" vertical-scroll-proportion="0.4219178">
+        <state line="66" column="0" selection-start="2363" selection-end="2363" vertical-scroll-proportion="-0.48767123">
           <folding>
             <element signature="e#24#61#0" expanded="true" />
-            <element signature="e#131#514#0" expanded="false" />
-            <element signature="e#559#926#0" expanded="false" />
-            <element signature="e#983#1226#0" expanded="false" />
-            <element signature="e#1279#1547#0" expanded="false" />
-            <element signature="e#1625#2053#0" expanded="false" />
-            <element signature="e#2081#2266#0" expanded="false" />
-            <element signature="e#2313#2719#0" expanded="false" />
-            <element signature="e#2792#3350#0" expanded="false" />
+            <element signature="e#558#925#0" expanded="false" />
+            <element signature="e#982#1225#0" expanded="false" />
+            <element signature="e#1278#1546#0" expanded="false" />
+            <element signature="e#1593#1773#0" expanded="false" />
+            <element signature="e#1814#2362#0" expanded="false" />
+            <element signature="e#2394#2877#0" expanded="false" />
+            <element signature="e#2905#3091#0" expanded="false" />
+            <element signature="e#3138#3544#0" expanded="false" />
+            <element signature="e#3617#4175#0" expanded="false" />
           </folding>
         </state>
       </provider>

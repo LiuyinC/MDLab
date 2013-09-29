@@ -18,7 +18,6 @@ class Article:
         return set(preprocess(self.title))
     def content_freqDist(self):
         return count_words(self.content)
-
 def article_reader(filename, file_id):
     articles_list = []
     sgm_extractor = SgmFile(filename)
@@ -44,10 +43,35 @@ def content_FreqDist_generator(articles_list):
             all_fdist.inc(key, value)
     return all_fdist
 
-# get the frequency distribution of given string
+def generate_topics_list(articles_list):
+    ### Generate topics list ###
+    topic_list = set()
+    for article in articles_list:
+        topic_list.add(article.topic)
+    topic_list = tuple(topic_list)
+    return topic_list
+
+def topic_category(articles_list):
+    ### Classify articles based on their topics ###
+    topic_articles_matrix = dict()
+    for article in articles_list:
+        if article.topic not in topic_articles_matrix.keys():
+            value = []
+            value.append(str(article.text_id))
+            topic_articles_matrix.update({article.topic: value})
+        else:
+            contained_list = topic_articles_matrix[article.topic]
+            contained_list.append(str(article.text_id))
+            topic_articles_matrix[article.topic] = contained_list
+    return topic_articles_matrix
+
+
+
+
 def count_words(data):
+    ### get the frequency distribution of given string ###
+
     # tokens = nltk.tokenize.word_tokenize(data)
-    
     tokens = preprocess(data)
     # here we want to try to set the tokens
     # tokens = list(set(preprocess(data)))
@@ -61,7 +85,7 @@ def count_words(data):
 
 def read_all_files():
     articles_list = []
-    for i in xrange(1):
+    for i in xrange(22):
         filename = "./rawdata/reut2-" + str(i).zfill(3) + ".sgm"
         articles_list += article_reader(filename, i)
     return articles_list
@@ -94,8 +118,8 @@ def content_keywords_generator(relative_word_list, articles_list):
 # NOTE: we need to replace <body> and </body> tags in all *.sgm files
 articles_list = read_all_files()
 print "len articles_list:", len(articles_list)
-for article in articles_list:
-    print article.topic
+print topic_category(articles_list)
+
 #content_keywords_vector = content_keywords_generator(sample_content_keywords_generator(), articles_list)
 #title_keywords_vector = title_keyword_vector_generator(articles_list)
 # print title_keyword_vector_generator(articles_list[0:10])
