@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9fc6e328-c969-4cd9-babb-54f00f47dd05" name="Default" comment="create functions of generating topics list and classifying articles based on topics">
+    <list default="true" id="9fc6e328-c969-4cd9-babb-54f00f47dd05" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Project_2_1.py" afterPath="$PROJECT_DIR$/Project_2_1.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.py" afterPath="$PROJECT_DIR$/test.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MDLab.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="9fc6e328-c969-4cd9-babb-54f00f47dd05" time="1380484844957" ignored="false" />
+    <file path="/Dummy.txt" changelist="9fc6e328-c969-4cd9-babb-54f00f47dd05" time="1380484935492" ignored="false" />
     <file path="/Project_1_1.py" changelist="9fc6e328-c969-4cd9-babb-54f00f47dd05" time="1380400886657" ignored="false" />
     <file path="E:/OSU-ISE/CSE 5243/Lab Assignments/test.py" changelist="9fc6e328-c969-4cd9-babb-54f00f47dd05" time="1378759776710" ignored="false" />
     <file path="/test.py" changelist="9fc6e328-c969-4cd9-babb-54f00f47dd05" time="1380482967801" ignored="false" />
@@ -16,7 +15,7 @@
     <file path="/lab1_sgm.py" changelist="9fc6e328-c969-4cd9-babb-54f00f47dd05" time="1379105140271" ignored="false" />
     <file path="E:/OSU-ISE/CSE 5243/test/test_dict.py" changelist="9fc6e328-c969-4cd9-babb-54f00f47dd05" time="1379122367890" ignored="false" />
     <file path="/test_dict.py" changelist="9fc6e328-c969-4cd9-babb-54f00f47dd05" time="1379122367890" ignored="false" />
-    <file path="/Project_2_1.py" changelist="9fc6e328-c969-4cd9-babb-54f00f47dd05" time="1380484755597" ignored="false" />
+    <file path="/Project_2_1.py" changelist="9fc6e328-c969-4cd9-babb-54f00f47dd05" time="1380485473511" ignored="false" />
     <file path="/proprocesser_token_stem.py" changelist="9fc6e328-c969-4cd9-babb-54f00f47dd05" time="1380402113703" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,16 +49,18 @@
       <file leaf-file-name="Project_2_1.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Project_2_1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="22" selection-start="2127" selection-end="2127" vertical-scroll-proportion="0.0625">
+            <state line="133" column="53" selection-start="5138" selection-end="5138" vertical-scroll-proportion="1.5">
               <folding>
                 <element signature="e#24#61#0" expanded="true" />
                 <element signature="e#131#514#0" expanded="false" />
+                <element signature="e#558#925#0" expanded="false" />
                 <element signature="e#982#1225#0" expanded="false" />
-                <element signature="e#1278#1546#0" expanded="false" />
-                <element signature="e#2798#3356#0" expanded="false" />
-                <element signature="e#3403#3583#0" expanded="false" />
-                <element signature="e#3624#4146#0" expanded="false" />
-                <element signature="e#4200#4792#0" expanded="false" />
+                <element signature="e#1575#2058#0" expanded="false" />
+                <element signature="e#2086#2272#0" expanded="false" />
+                <element signature="e#2738#3296#0" expanded="false" />
+                <element signature="e#3343#3523#0" expanded="false" />
+                <element signature="e#3564#4086#0" expanded="false" />
+                <element signature="e#4140#4732#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -386,7 +387,11 @@
       <created>1380430515601</created>
       <updated>1380430515601</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Slip data into two data categories: training data and testing data.">
+      <created>1380484945492</created>
+      <updated>1380484945492</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -451,7 +456,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="create functions of generating topics list and classifying articles based on topics" />
+    <option name="LAST_COMMIT_MESSAGE" value="Slip data into two data categories: training data and testing data." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -470,6 +475,7 @@
     <MESSAGE value="add print" />
     <MESSAGE value="Split preprocessor function into an isolated py document" />
     <MESSAGE value="create functions of generating topics list and classifying articles based on topics" />
+    <MESSAGE value="Slip data into two data categories: training data and testing data." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -674,16 +680,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Project_2_1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="22" selection-start="2127" selection-end="2127" vertical-scroll-proportion="0.0625">
+        <state line="133" column="53" selection-start="5138" selection-end="5138" vertical-scroll-proportion="1.5">
           <folding>
             <element signature="e#24#61#0" expanded="true" />
             <element signature="e#131#514#0" expanded="false" />
+            <element signature="e#558#925#0" expanded="false" />
             <element signature="e#982#1225#0" expanded="false" />
-            <element signature="e#1278#1546#0" expanded="false" />
-            <element signature="e#2798#3356#0" expanded="false" />
-            <element signature="e#3403#3583#0" expanded="false" />
-            <element signature="e#3624#4146#0" expanded="false" />
-            <element signature="e#4200#4792#0" expanded="false" />
+            <element signature="e#1575#2058#0" expanded="false" />
+            <element signature="e#2086#2272#0" expanded="false" />
+            <element signature="e#2738#3296#0" expanded="false" />
+            <element signature="e#3343#3523#0" expanded="false" />
+            <element signature="e#3564#4086#0" expanded="false" />
+            <element signature="e#4140#4732#0" expanded="false" />
           </folding>
         </state>
       </provider>

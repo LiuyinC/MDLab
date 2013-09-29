@@ -65,10 +65,9 @@ def read_all_files():
         articles_list += article_reader(filename, i)
     return articles_list
 
-def sample_content_keywords_generator():
+def sample_content_keywords_generator(sample_list):
     # generate sample content keywords by the first .sgm file (1000 articles)
-    sample_articles = article_reader("./rawdata/reut2-000.sgm", 0)
-    sample_fdist = content_FreqDist_generator(sample_articles)
+    sample_fdist = content_FreqDist_generator(sample_list)
     relative_word_list = []
     for word, word_fdist in sample_fdist.items():
         if word_fdist <=600 and word_fdist >= 100:
@@ -131,6 +130,7 @@ topic_articles_dict = topic_category(articles_list)
 sample_list = training_testing_list(topic_articles_dict)[0]
 print len(sample_list)
 print sample_list
+content_FreqDist_generator(sample_list).plot()
 #content_keywords_vector = content_keywords_generator(sample_content_keywords_generator(), articles_list)
 #title_keywords_vector = title_keyword_vector_generator(articles_list)
 # print title_keyword_vector_generator(articles_list[0:10])
