@@ -4,6 +4,8 @@ __author__ = 'Liuyin'
 from proprocesser_token_stem import *
 from lab1_sgm import *
 from nltk import FreqDist
+from key_word_list import *
+from Topic_keywords_dict import *
 
 class Article:
     def __init__(self,text_id,title,content, topic):
@@ -66,11 +68,11 @@ def read_all_files():
     return articles_list
 
 def sample_content_keywords_generator(sample_list):
-    # generate sample content keywords by the first .sgm file (1000 articles)
+    ### generate sample content keywords from sample list ###
     sample_fdist = content_FreqDist_generator(sample_list)
     relative_word_list = []
     for word, word_fdist in sample_fdist.items():
-        if word_fdist <=600 and word_fdist >= 100:
+        if word_fdist <=1000 and word_fdist >= 100:
             relative_word_list.append(word)
     return relative_word_list
 
@@ -84,7 +86,7 @@ def content_keywords_generator(relative_word_list, articles_list):
         for word in relative_word_list:
             word_counter = article_content.count(word)
             article_relative_word_counter.append(word_counter)
-        content_relative_word_vector.update({article_id : article_relative_word_counter})
+        content_relative_word_vector.update({article_id: article_relative_word_counter})
     return content_relative_word_vector
 
 def generate_topics_list(articles_list):
@@ -110,6 +112,7 @@ def topic_category(articles_list):
     return topic_articles_matrix
 
 def training_testing_list(topic_articles_dict):
+    ### Split all articles with topic into two categories: training and testing ###
     training_data_list = []
     testing_data_list = []
     split_para = 0.8
@@ -122,15 +125,45 @@ def training_testing_list(topic_articles_dict):
             testing_data_list.extend(topic_testing_data_list)
     return (training_data_list, testing_data_list)
 
+def training_topic_keywords(topic_articles_dict, key_word_list):
+    key_word_list = key_word_list
+    split_para = 0.8
+    topic_keyword_dict = {}
+    for key in topic_articles_dict.keys(): #Generate topic keywords#
+        topic_keywords = []
+        if key != 'N/A':
+            for item in preprocess(key):   # Include topic into keywords list #
+                topic_keywords.append(item)
+            topic_all_data_list = topic_articles_dict[key]
+            topic_training_data_list = topic_all_data_list[0: int(len(topic_all_data_list) * split_para + 1)] #split training data
+            for article in topic_training_data_list:
+                content = preprocess(article.content)
+                for keyword in key_word_list:
+                    if keyword in content :
+                        topic_keywords.append(keyword)
+            topic_keywords = set(topic_keywords)
+            topic_keywords = list(topic_keywords)
+            topic_keyword_dict.update({key: topic_keywords})
+    return topic_keyword_dict
+
+
+
 
 # NOTE: we need to replace <body> and </body> tags in all *.sgm files
 articles_list = read_all_files()
 print "len articles_list:", len(articles_list)
 topic_articles_dict = topic_category(articles_list)
 sample_list = training_testing_list(topic_articles_dict)[0]
-print len(sample_list)
-print sample_list
-content_FreqDist_generator(sample_list).plot()
+
+topic_keyword_dict = topic_keywords_dict()
+print topic_keyword_dict
+
+
+#print sample_content_keywords_generator(sample_list)
+
+# print len(sample_list)
+
+#content_FreqDist_generator(sample_list).plot()
 #content_keywords_vector = content_keywords_generator(sample_content_keywords_generator(), articles_list)
 #title_keywords_vector = title_keyword_vector_generator(articles_list)
 # print title_keyword_vector_generator(articles_list[0:10])
