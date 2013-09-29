@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9fc6e328-c969-4cd9-babb-54f00f47dd05" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Project_2_1.py" afterPath="$PROJECT_DIR$/Project_2_1.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MDLab.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="9fc6e328-c969-4cd9-babb-54f00f47dd05" time="1380484935492" ignored="false" />
+    <file path="/Dummy.txt" changelist="9fc6e328-c969-4cd9-babb-54f00f47dd05" time="1380485729737" ignored="false" />
     <file path="/Project_1_1.py" changelist="9fc6e328-c969-4cd9-babb-54f00f47dd05" time="1380400886657" ignored="false" />
     <file path="E:/OSU-ISE/CSE 5243/Lab Assignments/test.py" changelist="9fc6e328-c969-4cd9-babb-54f00f47dd05" time="1378759776710" ignored="false" />
     <file path="/test.py" changelist="9fc6e328-c969-4cd9-babb-54f00f47dd05" time="1380482967801" ignored="false" />
@@ -391,7 +390,11 @@
       <created>1380484945492</created>
       <updated>1380484945492</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="plot">
+      <created>1380485731852</created>
+      <updated>1380485731852</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -456,7 +459,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Slip data into two data categories: training data and testing data." />
+    <option name="LAST_COMMIT_MESSAGE" value="plot" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -476,6 +479,7 @@
     <MESSAGE value="Split preprocessor function into an isolated py document" />
     <MESSAGE value="create functions of generating topics list and classifying articles based on topics" />
     <MESSAGE value="Slip data into two data categories: training data and testing data." />
+    <MESSAGE value="plot" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
