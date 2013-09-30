@@ -18,8 +18,15 @@ for key in dictionary.keys():
 import Topic_keywords_dict
 dictionary = Topic_keywords_dict.topic_keywords_dict()
 i = 0
+print len(dictionary.keys())
 for key,value in dictionary.items():
     value_lenth = len(value)
     value_set_len = len(set(value))
     print key, value_lenth, value_set_len
-#print dictionary
+print dictionary['cocoa']
+print dictionary['grain']
+
+diff1 = set(dictionary['cocoa']) - set(dictionary['grain'])
+diff2 = set(dictionary['grain']) - set(dictionary['cocoa'])
+print diff1
+print diff2

@@ -7,6 +7,7 @@ from nltk import FreqDist
 import nltk
 import key_word_list
 import Topic_keywords_dict
+import key_word_list
 
 class Article:
     def __init__(self,text_id,title,content, topic):
@@ -151,19 +152,34 @@ def training_topic_keywords_generate(topic_articles_dict, key_word_list):
             topic_keyword_dict.update({key: topic_keywords})
     return topic_keyword_dict
 
-def predict_topic (article, topic_keywords_dict):
-    content = article.content
+def predict_topic_DT (article, topic_keywords_dict, keyword_list):
+    ### Predict Topic by Decision Tree ###
+    content = preprocess(article.content)
+    content_keywords = set(content) & set(keyword_list)
     tid = article.text_id
     pred_topic = []
     for key in topic_keywords_dict.keys():
         occurance = 0
-        for keyword in topic_keywords_dict[key]:
-            if keyword in content:
+        for keyword in list(content_keywords):
+            if keyword in topic_keywords_dict[key]:
                 occurance += 1
-        if (occurance / len(topic_keywords_dict[key])) <= 0.6:
-            pred_topic.append(key)
+        if len(content_keywords) != 0:
+            if (occurance / len(content_keywords)) >= 0.8:
+                pred_topic.append(key)
     return (tid, pred_topic)
 
+def calculate_accuracy_DT(testing_list):
+    cumu_acc = 0
+    for article in testing_list:
+        predicted_topics = predict_topic_DT(article, Topic_keywords_dict.topic_keywords_dict(), key_word_list.key_words())[1]
+        if set(predicted_topics) >= set(article.topic):
+            item_acc = 1
+            if len(set(predicted_topics) - set(article.topic)) >= 2:
+                item_acc = 0.5
+        else:
+            item_acc = 0
+        cumu_acc += item_acc
+    return (cumu_acc / len(testing_list))
 
 
 
@@ -176,14 +192,20 @@ print "len articles_list:", len(articles_list)
 
 topic_articles_dict = topic_category(articles_list)
 sample_list = training_testing_list(topic_articles_dict)[0]
-print len(sample_list)
-# print sample_list
-content_FreqDist_generator(set(sample_list)).plot(200)
-#testing_list = training_testing_list(topic_articles_dict)[1]
+testing_list = training_testing_list(topic_articles_dict)[1]
+print calculate_accuracy_DT(testing_list)
 
+#print predict_topic(testing_list[0], Topic_keywords_dict.topic_keywords_dict(), key_word_list.key_words())
+
+
+#for article in testing_list:
+#   print 'predicted topic', predict_topic_DT(article, Topic_keywords_dict.topic_keywords_dict(), key_word_list.key_words())
+#   print 'real topic', article.topic
+# print sample_list
+#content_FreqDist_generator(set(sample_list)).plot(200)
 #print articles_list[942].topic, type(articles_list[1].topic)
 
-
+#### Print topic keyword dictionary by fuctions###
 #topic_keyword_dict = training_topic_keywords_generate(topic_articles_dict,key_word_list.key_words())
 #print topic_keyword_dict
 
@@ -191,10 +213,9 @@ content_FreqDist_generator(set(sample_list)).plot(200)
 #print predict_topic(testing_list[0],topic_keyword_dict)
 #print testing_list[0].topic
 
-
+#### print topic keywords by sample articles list #####
 #print sample_content_keywords_generator(sample_list)
 
-# print len(sample_list)
 
 # content_FreqDist_generator(sample_list).plot()
 
