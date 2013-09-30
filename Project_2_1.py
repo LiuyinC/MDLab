@@ -4,8 +4,9 @@ __author__ = 'Liuyin'
 from proprocesser_token_stem import *
 from lab1_sgm import *
 from nltk import FreqDist
-from key_word_list import *
-from Topic_keywords_dict import *
+import nltk
+import key_word_list
+import Topic_keywords_dict
 
 class Article:
     def __init__(self,text_id,title,content, topic):
@@ -13,9 +14,11 @@ class Article:
         self.title = title
         self.content = content
         if topic != "":
-            self.topic = topic
+            self.topic = nltk.word_tokenize(topic)
         else:
-            self.topic = "N/A"
+            topic_na = []
+            topic_na.append('N/A')
+            self.topic = topic_na
     def title_keywords(self):
         return set(preprocess(self.title))
     def content_freqDist(self):
@@ -50,10 +53,11 @@ def count_words(data):
 
     # tokens = nltk.tokenize.word_tokenize(data)
     tokens = preprocess(data)
+    tokens_set = set(tokens)
     # here we want to try to set the tokens
     # tokens = list(set(preprocess(data)))
 
-    fdist = FreqDist(tokens) #input is a list of string
+    fdist = FreqDist(tokens_set) #input is a list of string
     # vocabulary = fdist.keys() 
     # print vocabulary[:50]
     # print fdist.tabulate()
@@ -91,9 +95,10 @@ def content_keywords_generator(relative_word_list, articles_list):
 
 def generate_topics_list(articles_list):
     ### Generate topics list ###
-    topic_list = set()
+    topic_list = []
     for article in articles_list:
-        topic_list.add(article.topic)
+        topic_list.extend(article.topic)
+    topic_list = set(topic_list)
     topic_list = tuple(topic_list)
     return topic_list
 
@@ -101,14 +106,15 @@ def topic_category(articles_list):
     ### Classify articles based on their topics ###
     topic_articles_matrix = dict()
     for article in articles_list:
-        if article.topic not in topic_articles_matrix.keys():
-            value = []
-            value.append(article)
-            topic_articles_matrix.update({article.topic: value})
-        else:
-            contained_list = topic_articles_matrix[article.topic]
-            contained_list.append(article)
-            topic_articles_matrix[article.topic] = contained_list
+        for topic in article.topic:
+            if topic not in topic_articles_matrix.keys():
+                value = []
+                value.append(article)
+                topic_articles_matrix.update({topic: value})
+            else:
+                contained_list = topic_articles_matrix[topic]
+                contained_list.append(article)
+                topic_articles_matrix[topic] = contained_list
     return topic_articles_matrix
 
 def training_testing_list(topic_articles_dict):
@@ -125,8 +131,7 @@ def training_testing_list(topic_articles_dict):
             testing_data_list.extend(topic_testing_data_list)
     return (training_data_list, testing_data_list)
 
-def training_topic_keywords(topic_articles_dict, key_word_list):
-    key_word_list = key_word_list
+def training_topic_keywords_generate(topic_articles_dict, key_word_list):
     split_para = 0.8
     topic_keyword_dict = {}
     for key in topic_articles_dict.keys(): #Generate topic keywords#
@@ -146,24 +151,51 @@ def training_topic_keywords(topic_articles_dict, key_word_list):
             topic_keyword_dict.update({key: topic_keywords})
     return topic_keyword_dict
 
+def predict_topic (article, topic_keywords_dict):
+    content = article.content
+    tid = article.text_id
+    pred_topic = []
+    for key in topic_keywords_dict.keys():
+        occurance = 0
+        for keyword in topic_keywords_dict[key]:
+            if keyword in content:
+                occurance += 1
+        if (occurance / len(topic_keywords_dict[key])) <= 0.6:
+            pred_topic.append(key)
+    return (tid, pred_topic)
+
+
+
 
 
 
 # NOTE: we need to replace <body> and </body> tags in all *.sgm files
 articles_list = read_all_files()
 print "len articles_list:", len(articles_list)
+
+
 topic_articles_dict = topic_category(articles_list)
 sample_list = training_testing_list(topic_articles_dict)[0]
+#testing_list = training_testing_list(topic_articles_dict)[1]
 
-topic_keyword_dict = topic_keywords_dict()
-print topic_keyword_dict
+#print articles_list[942].topic, type(articles_list[1].topic)
+
+
+#topic_keyword_dict = training_topic_keywords_generate(topic_articles_dict,key_word_list.key_words())
+#print topic_keyword_dict
+
+
+#print predict_topic(testing_list[0],topic_keyword_dict)
+#print testing_list[0].topic
 
 
 #print sample_content_keywords_generator(sample_list)
 
 # print len(sample_list)
 
-#content_FreqDist_generator(sample_list).plot()
+content_FreqDist_generator(sample_list).plot()
+
+
 #content_keywords_vector = content_keywords_generator(sample_content_keywords_generator(), articles_list)
 #title_keywords_vector = title_keyword_vector_generator(articles_list)
 # print title_keyword_vector_generator(articles_list[0:10])
