@@ -4,6 +4,7 @@ __author__ = 'Liuyin'
 import nltk
 from nltk.corpus import stopwords
 
+
 PUNCTUATION =[';', ':', ',', '.', '!', '?', '>', '<', '"', ']', '[', '-', '(', ')', "''", '``']
 GENERAL_STOPWORDS_LIST = stopwords.words("english") + PUNCTUATION
 
