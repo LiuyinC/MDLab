@@ -24,6 +24,13 @@ class Article:
         return set(preprocess(self.title))
     def content_freqDist(self):
         return count_words(self.content)
+    def content_keywords(self):
+        token_con = set(preprocess(self.content))
+        content_keywords = []
+        for word in token_con:
+            if word in key_word_list.key_words():
+                content_keywords.append(word)
+        return list(content_keywords)
 def article_reader(filename, file_id):
     articles_list = []
     sgm_extractor = SgmFile(filename)
@@ -67,7 +74,7 @@ def count_words(data):
 
 def read_all_files():
     articles_list = []
-    for i in xrange(22):
+    for i in xrange(1):
         filename = "./rawdata/reut2-" + str(i).zfill(3) + ".sgm"
         articles_list += article_reader(filename, i)
     return articles_list
@@ -132,7 +139,7 @@ def training_testing_list(topic_articles_dict):
             testing_data_list.extend(topic_testing_data_list)
     return (training_data_list, testing_data_list)
 
-def training_topic_keywords_generate(topic_articles_dict, key_word_list):
+def training_topic_keywords_generate(topic_articles_dict):
     split_para = 0.8
     topic_keyword_dict = {}
     for key in topic_articles_dict.keys(): #Generate topic keywords#
@@ -143,10 +150,7 @@ def training_topic_keywords_generate(topic_articles_dict, key_word_list):
             topic_all_data_list = topic_articles_dict[key]
             topic_training_data_list = topic_all_data_list[0: int(len(topic_all_data_list) * split_para + 1)] #split training data
             for article in topic_training_data_list:
-                content = preprocess(article.content)
-                for keyword in key_word_list:
-                    if keyword in content :
-                        topic_keywords.append(keyword)
+                topic_keywords.extend(article.content_keywords())
             topic_keywords = set(topic_keywords)
             topic_keywords = list(topic_keywords)
             topic_keyword_dict.update({key: topic_keywords})
@@ -194,13 +198,12 @@ topic_articles_dict = topic_category(articles_list)
 sample_list = training_testing_list(topic_articles_dict)[0]
 testing_list = training_testing_list(topic_articles_dict)[1]
 print calculate_accuracy_DT(testing_list)
-
 #print predict_topic(testing_list[0], Topic_keywords_dict.topic_keywords_dict(), key_word_list.key_words())
 
 
 #for article in testing_list:
-#   print 'predicted topic', predict_topic_DT(article, Topic_keywords_dict.topic_keywords_dict(), key_word_list.key_words())
-#   print 'real topic', article.topic
+ #  print 'predicted topic', predict_topic_DT(article, Topic_keywords_dict.topic_keywords_dict(), key_word_list.key_words())
+  # print 'real topic', article.topic
 # print sample_list
 #content_FreqDist_generator(set(sample_list)).plot(200)
 #print articles_list[942].topic, type(articles_list[1].topic)
