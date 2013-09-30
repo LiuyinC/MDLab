@@ -129,8 +129,8 @@ print "len articles_list:", len(articles_list)
 topic_articles_dict = topic_category(articles_list)
 sample_list = training_testing_list(topic_articles_dict)[0]
 print len(sample_list)
-print sample_list
-content_FreqDist_generator(sample_list).plot()
+# print sample_list
+content_FreqDist_generator(sample_list).plot(200)
 #content_keywords_vector = content_keywords_generator(sample_content_keywords_generator(), articles_list)
 #title_keywords_vector = title_keyword_vector_generator(articles_list)
 # print title_keyword_vector_generator(articles_list[0:10])
