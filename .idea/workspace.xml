@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9fc6e328-c969-4cd9-babb-54f00f47dd05" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/README_Lab_2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Project_2_1.py" afterPath="$PROJECT_DIR$/Project_2_1.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.py" afterPath="$PROJECT_DIR$/test.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MDLab.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="9fc6e328-c969-4cd9-babb-54f00f47dd05" time="1380578446164" ignored="false" />
+    <file path="/Dummy.txt" changelist="9fc6e328-c969-4cd9-babb-54f00f47dd05" time="1380600779050" ignored="false" />
     <file path="/Project_1_1.py" changelist="9fc6e328-c969-4cd9-babb-54f00f47dd05" time="1380400886657" ignored="false" />
     <file path="E:/OSU-ISE/CSE 5243/Lab Assignments/test.py" changelist="9fc6e328-c969-4cd9-babb-54f00f47dd05" time="1378759776710" ignored="false" />
     <file path="/test.py" changelist="9fc6e328-c969-4cd9-babb-54f00f47dd05" time="1380595979057" ignored="false" />
@@ -70,7 +67,7 @@
       <file leaf-file-name="README_Lab_2" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README_Lab_2">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="31" selection-start="283" selection-end="283" vertical-scroll-proportion="0.36164382">
+            <state line="6" column="31" selection-start="283" selection-end="283" vertical-scroll-proportion="0.03561644">
               <folding />
             </state>
           </provider>
@@ -491,7 +488,11 @@
       <created>1380578448561</created>
       <updated>1380578448561</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="final version">
+      <created>1380600783394</created>
+      <updated>1380600783394</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -556,7 +557,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="add a method of figure out content keywords in class of article" />
+    <option name="LAST_COMMIT_MESSAGE" value="final version" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -581,6 +582,7 @@
     <MESSAGE value="run and plot" />
     <MESSAGE value="predict article topic by decision tree and calculate its accuracy." />
     <MESSAGE value="add a method of figure out content keywords in class of article" />
+    <MESSAGE value="final version" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -742,7 +744,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README_Lab_2">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="31" selection-start="283" selection-end="283" vertical-scroll-proportion="0.36164382">
+        <state line="6" column="31" selection-start="283" selection-end="283" vertical-scroll-proportion="0.03561644">
           <folding />
         </state>
       </provider>
