@@ -7,7 +7,9 @@ from nltk import FreqDist
 import nltk
 import key_word_list
 import Topic_keywords_dict
-import key_word_list
+from text.classifiers import NaiveBayesClassifier
+
+
 
 class Article:
     def __init__(self,text_id,title,content, topic):
@@ -139,6 +141,22 @@ def training_testing_list(topic_articles_dict):
             testing_data_list.extend(topic_testing_data_list)
     return (training_data_list, testing_data_list)
 
+def training_dict(topic_articles_dict):
+    training_dict = {}
+    for key, value in topic_articles_dict.items():
+        if key != 'N/A':
+            value = value[0: int(len(value) * 0.8) + 1]
+            training_dict.update({key: value})
+    return training_dict
+
+def testing_dict(topic_articles_dict):
+    testing_dict = {}
+    for key, value in topic_articles_dict.items():
+        if key != 'N/A':
+            value = value[ int(len(value) * 0.8) + 1:]
+            testing_dict.update({key: value})
+    return testing_dict
+
 def training_topic_keywords_generate(topic_articles_dict):
     split_para = 0.8
     topic_keyword_dict = {}
@@ -155,6 +173,8 @@ def training_topic_keywords_generate(topic_articles_dict):
             topic_keywords = list(topic_keywords)
             topic_keyword_dict.update({key: topic_keywords})
     return topic_keyword_dict
+
+
 
 def predict_topic_DT (article, topic_keywords_dict, keyword_list):
     ### Predict Topic by Decision Tree ###
@@ -185,8 +205,39 @@ def calculate_accuracy_DT(testing_list):
         cumu_acc += item_acc
     return (cumu_acc / len(testing_list))
 
+def contradiction_list(article_list):
+    contra_list = []
+    for article in article_list:
+        cont_kw = article.content_keywords()
+        if article.topic == ['N/A']:
+            if cont_kw != []:
+                item = (cont_kw, 'N/A')
+                contra_list.append(item)
+    return contra_list
 
+def classifier_NB(training_dict, contro_list):
+    classifier_list = {}
+    for topic in training_dict.keys():
+        train_topic = []
+        train_topic.extend(contro_list)
+        for article in training_dict[topic]:
+            cont_kw = article.content_keywords()
+            if cont_kw != []:
+                item = (cont_kw, topic)
+                train_topic.append(item)
+        if train_topic != []:
+            topic_cl = NaiveBayesClassifier(train_topic)
+            classifier_list.update({topic: topic_cl})
+    return classifier_list  # return (key, value) = (topic, topic classifier)
 
+def predict_topic_NB(article, classifier_list):
+    text_cont = article.content_keywords()
+    predicted_topics = []
+    if text_cont != []:
+        for topic in classifier_list.keys():
+            if classifier_list[topic].classify(text_cont) == topic:
+                predicted_topics.append(topic)
+    return predicted_topics
 
 
 # NOTE: we need to replace <body> and </body> tags in all *.sgm files
@@ -195,9 +246,24 @@ print "len articles_list:", len(articles_list)
 
 
 topic_articles_dict = topic_category(articles_list)
-sample_list = training_testing_list(topic_articles_dict)[0]
+#training_list = training_testing_list(topic_articles_dict)[0]
 testing_list = training_testing_list(topic_articles_dict)[1]
-print calculate_accuracy_DT(testing_list)
+contro_list = contradiction_list(articles_list[0:50])
+
+test_dict = testing_dict(topic_articles_dict)
+#classifiers = classifier_NB(test_dict,contro_list)
+#for article in testing_list:
+#    print "predicted topics:", predict_topic_NB(article,classifiers)
+#    print "real topics", article.topic
+
+
+
+
+
+
+#
+
+# print calculate_accuracy_DT(testing_list)
 #print predict_topic(testing_list[0], Topic_keywords_dict.topic_keywords_dict(), key_word_list.key_words())
 
 

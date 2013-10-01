@@ -41,4 +41,57 @@ def show_keywords_list():
     return
 
 #show_keywords_list()
-show_topic_keywords_dic()
+#show_topic_keywords_dic()
+
+from text.classifiers import NaiveBayesClassifier
+
+def test_Textblog():
+    train = [
+        ('I love this sandwich.', 'pos'),
+        ('This is an amazing place!', 'pos'),
+        ('I feel very good about these beers.', 'pos'),
+        ('This is my best work.', 'pos'),
+        ("What an awesome view", 'pos'),
+        ('I do not like this restaurant', 'neg'),
+        ('I am tired of this stuff.', 'neg'),
+        ("I can't deal with this", 'neg'),
+        ('He is my sworn enemy!', 'neg'),
+        ('My boss is horrible.', 'neg')
+    ]
+    test = [
+        ('The beer was good.', 'pos'),
+        ('I do not enjoy my job', 'neg'),
+        ("I ain't feeling dandy today.", 'neg'),
+        ("I feel amazing!", 'pos'),
+        ('Gary is a friend of mine.', 'pos'),
+        ("I can't believe I'm doing this.", 'neg')
+    ]
+    cl = NaiveBayesClassifier(train)
+    #print cl.classify("Their burgers are amazing")  # "pos"
+    #print cl.classify("I don't like their pizza.")  # "neg"
+    import nltk
+    new_train = []
+    for item in train:
+        token_sent = nltk.word_tokenize(item[0])
+
+        item = list(item)
+        item[0] = token_sent
+        item[1] = item[1]
+        item = tuple(item)
+        new_train.append(item)
+
+    print new_train
+    cl = NaiveBayesClassifier(new_train)
+    new_test = nltk.word_tokenize("I don't like their pizza.")
+    print new_test, cl.classify(new_test)
+
+#test_Textblog()
+
+lista = ['a']
+if lista != []:
+    print "not empty"
+else:
+    print "empty"
+
+listb = ['copper', 'coconut', 'livestock', 'gold', 'yen', 'tea', 'sunseed', 'ipi', 'trade', 'cocoa', 'iron-steel', 'reserves', 'soybean', 'jobs', 'zinc', 'inventories', 'ship', 'retail', 'cotton', 'platinum', 'alum', 'strategic-metal', 'instal-debt', 'earn', 'jet', 'palm-oil', 'housing', 'money-fx', 'veg-oil', 'sugar', 'rubber', 'dlr', 'tin', 'groundnut', 'barley', 'interest', 'income', 'fuel', 'grain', 'rice', 'pet-chem', 'coffee', 'soy-oil', 'nickel', 'meal-feed', 'propane', 'lei', 'corn', 'gas', 'nat-gas', 'oilseed', 'orange', 'heat', 'naphtha', 'wpi', 'rape-oil', 'l-cattle', 'silver', 'soy-meal', 'cpi', 'gnp', 'stg', 'lead', 'potato', 'bop', 'sun-oil', 'dmk', 'money-supply', 'carcass', 'hog', 'acq', 'lumber', 'wheat', 'coconut-oil', 'crude', 'sorghum', 'oat', 'rapeseed']
+print listb.count('barley')

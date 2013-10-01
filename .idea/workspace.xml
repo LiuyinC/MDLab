@@ -2,24 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9fc6e328-c969-4cd9-babb-54f00f47dd05" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/README_Lab_2" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Project_2_1.py" afterPath="$PROJECT_DIR$/Project_2_1.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.py" afterPath="$PROJECT_DIR$/test.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MDLab.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="9fc6e328-c969-4cd9-babb-54f00f47dd05" time="1380568220507" ignored="false" />
+    <file path="/Dummy.txt" changelist="9fc6e328-c969-4cd9-babb-54f00f47dd05" time="1380578446164" ignored="false" />
     <file path="/Project_1_1.py" changelist="9fc6e328-c969-4cd9-babb-54f00f47dd05" time="1380400886657" ignored="false" />
     <file path="E:/OSU-ISE/CSE 5243/Lab Assignments/test.py" changelist="9fc6e328-c969-4cd9-babb-54f00f47dd05" time="1378759776710" ignored="false" />
-    <file path="/test.py" changelist="9fc6e328-c969-4cd9-babb-54f00f47dd05" time="1380570026391" ignored="false" />
+    <file path="/test.py" changelist="9fc6e328-c969-4cd9-babb-54f00f47dd05" time="1380595979057" ignored="false" />
     <file path="E:/OSU-ISE/CSE 5243/test/test.py" changelist="9fc6e328-c969-4cd9-babb-54f00f47dd05" time="1379101799207" ignored="false" />
     <file path="/lab1_sgm.py" changelist="9fc6e328-c969-4cd9-babb-54f00f47dd05" time="1379105140271" ignored="false" />
     <file path="E:/OSU-ISE/CSE 5243/test/test_dict.py" changelist="9fc6e328-c969-4cd9-babb-54f00f47dd05" time="1379122367890" ignored="false" />
     <file path="/test_dict.py" changelist="9fc6e328-c969-4cd9-babb-54f00f47dd05" time="1379122367890" ignored="false" />
-    <file path="/Project_2_1.py" changelist="9fc6e328-c969-4cd9-babb-54f00f47dd05" time="1380576885267" ignored="false" />
+    <file path="/Project_2_1.py" changelist="9fc6e328-c969-4cd9-babb-54f00f47dd05" time="1380600561424" ignored="false" />
     <file path="/proprocesser_token_stem.py" changelist="9fc6e328-c969-4cd9-babb-54f00f47dd05" time="1380489108445" ignored="false" />
     <file path="/key_word_list.py" changelist="9fc6e328-c969-4cd9-babb-54f00f47dd05" time="1380507249427" ignored="false" />
     <file path="/Topic_keywords_dict.py" changelist="9fc6e328-c969-4cd9-babb-54f00f47dd05" time="1380498072552" ignored="false" />
+    <file path="/run_tests.py" changelist="9fc6e328-c969-4cd9-babb-54f00f47dd05" time="1380581805231" ignored="false" />
+    <file path="/README_Lab_2" changelist="9fc6e328-c969-4cd9-babb-54f00f47dd05" time="1380600686270" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,34 +48,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Project_2_1.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Project_2_1.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Project_2_1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="76" column="21" selection-start="2601" selection-end="2601" vertical-scroll-proportion="0.4375">
+            <state line="256" column="39" selection-start="9558" selection-end="9749" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#24#61#0" expanded="true" />
-                <element signature="e#212#956#0" expanded="false" />
-                <element signature="e#720#956#0" expanded="false" />
-                <element signature="e#1000#1367#0" expanded="false" />
-                <element signature="e#1424#1667#0" expanded="false" />
-                <element signature="e#1720#1988#0" expanded="false" />
-                <element signature="e#2017#2533#0" expanded="false" />
-                <element signature="e#2804#3124#0" expanded="false" />
-                <element signature="e#3197#3754#0" expanded="false" />
-                <element signature="e#3801#4014#0" expanded="false" />
-                <element signature="e#4055#4613#0" expanded="false" />
-                <element signature="e#4667#5343#0" expanded="false" />
-                <element signature="e#6270#6813#0" expanded="false" />
-                <element signature="e#6860#7322#0" expanded="false" />
+                <element signature="e#243#987#0" expanded="false" />
+                <element signature="e#751#987#0" expanded="false" />
+                <element signature="e#1031#1398#0" expanded="false" />
+                <element signature="e#1455#1698#0" expanded="false" />
+                <element signature="e#1751#2019#0" expanded="false" />
+                <element signature="e#2048#2564#0" expanded="false" />
+                <element signature="e#2835#3155#0" expanded="false" />
+                <element signature="e#3228#3785#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="proprocesser_token_stem.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/proprocesser_token_stem.py">
+      <file leaf-file-name="README_Lab_2" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README_Lab_2">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="0" selection-start="285" selection-end="285" vertical-scroll-proportion="0.0">
+            <state line="6" column="31" selection-start="283" selection-end="283" vertical-scroll-proportion="0.36164382">
               <folding />
             </state>
           </provider>
@@ -81,7 +79,16 @@
       <file leaf-file-name="test.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="30" selection-start="17503" selection-end="17503" vertical-scroll-proportion="0.0">
+            <state line="95" column="36" selection-start="19418" selection-end="19418" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="proprocesser_token_stem.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/proprocesser_token_stem.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="0" selection-start="285" selection-end="285" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -112,8 +119,10 @@
         <option value="$PROJECT_DIR$/proprocesser_token_stem.py" />
         <option value="$PROJECT_DIR$/key_word_list.py" />
         <option value="$PROJECT_DIR$/Topic_keywords_dict.py" />
+        <option value="D:/tools/Python27/Lib/site-packages/sloria-TextBlob-6b76c3f/run_tests.py" />
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/Project_2_1.py" />
+        <option value="$PROJECT_DIR$/README_Lab_2" />
       </list>
     </option>
   </component>
@@ -155,10 +164,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="MDLab" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -281,18 +286,35 @@
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
-    <configuration default="false" name="proprocesser_token_stem" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="run_tests" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="D:/tools/Python27/Lib/site-packages/sloria-TextBlob-6b76c3f" />
       <option name="IS_MODULE_SDK" value="true" />
       <module name="MDLab" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/proprocesser_token_stem.py" />
+      <option name="SCRIPT_NAME" value="D:/tools/Python27/Lib/site-packages/sloria-TextBlob-6b76c3f/run_tests.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="setup" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="D:/tools/Python27/Lib/site-packages/sloria-TextBlob-6b76c3f" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <module name="MDLab" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="D:/tools/Python27/Lib/site-packages/sloria-TextBlob-6b76c3f/setup.py" />
       <option name="PARAMETERS" value="" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
@@ -370,19 +392,21 @@
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
-    <list size="5">
+    <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Python.Project_1_1" />
       <item index="1" class="java.lang.String" itemvalue="Python.Project_2_1" />
       <item index="2" class="java.lang.String" itemvalue="Python.test" />
       <item index="3" class="java.lang.String" itemvalue="Python.key_word_list" />
-      <item index="4" class="java.lang.String" itemvalue="Python.proprocesser_token_stem" />
+      <item index="4" class="java.lang.String" itemvalue="Python.run_tests" />
+      <item index="5" class="java.lang.String" itemvalue="Python.setup" />
     </list>
     <recent_temporary>
-      <list size="4">
+      <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.Project_2_1" />
         <item index="1" class="java.lang.String" itemvalue="Python.test" />
-        <item index="2" class="java.lang.String" itemvalue="Python.key_word_list" />
-        <item index="3" class="java.lang.String" itemvalue="Python.proprocesser_token_stem" />
+        <item index="2" class="java.lang.String" itemvalue="Python.setup" />
+        <item index="3" class="java.lang.String" itemvalue="Python.run_tests" />
+        <item index="4" class="java.lang.String" itemvalue="Python.key_word_list" />
       </list>
     </recent_temporary>
   </component>
@@ -463,19 +487,24 @@
       <created>1380568226099</created>
       <updated>1380568226099</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="add a method of figure out content keywords in class of article">
+      <created>1380578448561</created>
+      <updated>1380578448561</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991454" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2931818" sideWeight="0.6700855" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2931818" sideWeight="0.6700855" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45470086" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.6700855" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991454" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -484,7 +513,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -528,7 +556,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="predict article topic by decision tree and calculate its accuracy." />
+    <option name="LAST_COMMIT_MESSAGE" value="add a method of figure out content keywords in class of article" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -552,6 +580,7 @@
     <MESSAGE value="generate a dictionary of topic and its keywords for training data&#10;" />
     <MESSAGE value="run and plot" />
     <MESSAGE value="predict article topic by decision tree and calculate its accuracy." />
+    <MESSAGE value="add a method of figure out content keywords in class of article" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -565,91 +594,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lab1_sgm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="685" selection-end="685" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project_1_1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="25" selection-start="330" selection-end="330" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#23#34#0" expanded="false" />
-            <element signature="e#403#1379#0" expanded="false" />
-            <element signature="e#2252#2495#0" expanded="false" />
-            <element signature="e#2548#2816#0" expanded="false" />
-            <element signature="e#2894#3322#0" expanded="false" />
-            <element signature="e#3350#3535#0" expanded="false" />
-            <element signature="e#3582#3988#0" expanded="false" />
-            <element signature="e#4061#4619#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project_1_1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="102" column="0" selection-start="3620" selection-end="3620" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#23#34#0" expanded="false" />
-            <element signature="e#403#1379#0" expanded="false" />
-            <element signature="e#2252#2495#0" expanded="false" />
-            <element signature="e#2548#2816#0" expanded="false" />
-            <element signature="e#2894#3322#0" expanded="false" />
-            <element signature="e#3350#3535#0" expanded="false" />
-            <element signature="e#3582#3988#0" expanded="false" />
-            <element signature="e#4061#4619#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lab1_sgm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="4" selection-start="726" selection-end="726" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project_1_1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="137" selection-end="137" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#23#34#0" expanded="false" />
-            <element signature="e#403#1379#0" expanded="false" />
-            <element signature="e#2252#2495#0" expanded="false" />
-            <element signature="e#2548#2816#0" expanded="false" />
-            <element signature="e#2894#3322#0" expanded="false" />
-            <element signature="e#3350#3535#0" expanded="false" />
-            <element signature="e#3582#3988#0" expanded="false" />
-            <element signature="e#4061#4619#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lab1_sgm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project_1_1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="0" selection-start="1434" selection-end="1434" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#23#34#0" expanded="false" />
-            <element signature="e#403#1379#0" expanded="false" />
-            <element signature="e#2252#2495#0" expanded="false" />
-            <element signature="e#2548#2816#0" expanded="false" />
-            <element signature="e#2894#3322#0" expanded="false" />
-            <element signature="e#3350#3535#0" expanded="false" />
-            <element signature="e#3582#3988#0" expanded="false" />
-            <element signature="e#4061#4619#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Project_1_1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="98" column="30" selection-start="3535" selection-end="3535" vertical-scroll-proportion="0.0">
@@ -664,11 +608,6 @@
             <element signature="e#4061#4619#0" expanded="false" />
           </folding>
         </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/tools/Python27/Lib/site-packages/nltk/probability.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="291" column="0" selection-start="10273" selection-end="10273" vertical-scroll-proportion="0.33150685" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Project_1_1.py">
@@ -708,6 +647,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://D:/tools/Python27/Lib/site-packages/sloria-TextBlob-6b76c3f/README.rst">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/tools/Python27/Lib/site-packages/sloria-TextBlob-6b76c3f/run_tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="0" selection-start="1546" selection-end="1546" vertical-scroll-proportion="0.63835615">
+          <folding>
+            <element signature="e#225#264#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/tools/Python27/Lib/site-packages/sloria-TextBlob-6b76c3f/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="4" selection-start="56" selection-end="56" vertical-scroll-proportion="-0.06027397">
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/tools/Python27/Lib/site-packages/text/classifiers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="160" column="0" selection-start="5823" selection-end="5823" vertical-scroll-proportion="1.7780821">
+          <folding>
+            <marker date="1380569256000" expanded="false" signature="-1:-1" placeholder="import ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/key_word_list.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="1" selection-start="12645" selection-end="12645" vertical-scroll-proportion="0.0">
@@ -715,32 +688,62 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://D:/tools/Python27/Lib/site-packages/nltk/classify/naivebayes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="213" column="0" selection-start="8949" selection-end="8949" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="30" selection-start="17503" selection-end="17503" vertical-scroll-proportion="0.0">
+        <state line="95" column="36" selection-start="19418" selection-end="19418" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/tools/Python27/Lib/site-packages/text/decorators.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="0" selection-start="583" selection-end="583" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/tools/Python27/Lib/site-packages/nltk/probability.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="119" column="0" selection-start="4436" selection-end="4436" vertical-scroll-proportion="0.33238637">
+          <folding>
+            <marker date="1352328584000" expanded="false" signature="-1:-1" placeholder="import ..." />
+            <marker date="1352328584000" expanded="false" signature="-1:-1" placeholder="import ..." />
+            <marker date="1352328584000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1352328584000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1352328584000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1352328584000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Project_2_1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="21" selection-start="2601" selection-end="2601" vertical-scroll-proportion="0.4375">
+        <state line="256" column="39" selection-start="9558" selection-end="9749" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#24#61#0" expanded="true" />
-            <element signature="e#212#956#0" expanded="false" />
-            <element signature="e#720#956#0" expanded="false" />
-            <element signature="e#1000#1367#0" expanded="false" />
-            <element signature="e#1424#1667#0" expanded="false" />
-            <element signature="e#1720#1988#0" expanded="false" />
-            <element signature="e#2017#2533#0" expanded="false" />
-            <element signature="e#2804#3124#0" expanded="false" />
-            <element signature="e#3197#3754#0" expanded="false" />
-            <element signature="e#3801#4014#0" expanded="false" />
-            <element signature="e#4055#4613#0" expanded="false" />
-            <element signature="e#4667#5343#0" expanded="false" />
-            <element signature="e#6270#6813#0" expanded="false" />
-            <element signature="e#6860#7322#0" expanded="false" />
+            <element signature="e#243#987#0" expanded="false" />
+            <element signature="e#751#987#0" expanded="false" />
+            <element signature="e#1031#1398#0" expanded="false" />
+            <element signature="e#1455#1698#0" expanded="false" />
+            <element signature="e#1751#2019#0" expanded="false" />
+            <element signature="e#2048#2564#0" expanded="false" />
+            <element signature="e#2835#3155#0" expanded="false" />
+            <element signature="e#3228#3785#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README_Lab_2">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="31" selection-start="283" selection-end="283" vertical-scroll-proportion="0.36164382">
+          <folding />
         </state>
       </provider>
     </entry>
